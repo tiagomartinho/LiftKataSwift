@@ -9,13 +9,14 @@ The idea is to have the simplest and fastest setup to learn TDD in Swift. The pr
 ## Requirements
 
 * macOS 10.13 or higher
-* Xcode 9.2 or higher
+* Xcode 9.3.1 or higher
 
 ## Run Tests
 
 We use [XCTest](https://developer.apple.com/documentation/xctest).
 
 To run the tests:
+
 * open the Xcode Project "macOSUnitTest.xcodeproj"
 * select the "UnitTestBundle" iOS scheme
 * Run by pressing "Product" > "Test" or by pressing [Cmd + U]
