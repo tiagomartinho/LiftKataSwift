@@ -11,8 +11,10 @@ class Elevator {
 
     func tick() {
         guard let destinationFloor = destinationFloor else { return }
-        let reachedDestination = destinationFloor - currentFloor > 0
+        let floorsToDestination = destinationFloor - currentFloor
+        let reachedDestination = floorsToDestination != 0
         guard reachedDestination else { return }
-        currentFloor += 1
+        let isMovingUp = floorsToDestination > 0
+        currentFloor += isMovingUp ? +1 : -1
     }
 }

@@ -29,4 +29,12 @@ class TestElevator: XCTestCase {
 
         XCTAssertEqual(2, elevator.currentFloor)
     }
+
+    func testElevatorGoesToUndergroundFloor() {
+        elevator.call(sourceFloor: -3)
+
+        for _ in 1...100 { elevator.tick() }
+
+        XCTAssertEqual(-3, elevator.currentFloor)
+    }
 }
