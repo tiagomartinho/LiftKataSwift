@@ -10,8 +10,11 @@ class Elevator {
     }
 
     private var reachedDestination: Bool {
-        let floorsToDestination = destinationFloor - currentFloor
-        return floorsToDestination != 0
+        return destinationFloor == currentFloor
+    }
+
+    var areDoorsOpen: Bool {
+        return reachedDestination
     }
 
     func call(sourceFloor: Floor) {
@@ -19,8 +22,12 @@ class Elevator {
     }
 
     func tick() {
-        guard reachedDestination else { return }
+        guard !reachedDestination else { return }
         move()
+    }
+
+    func travel(to floor: Floor) {
+        destinationFloor = floor
     }
 
     private func move() {

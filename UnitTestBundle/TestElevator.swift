@@ -37,4 +37,36 @@ class TestElevator: XCTestCase {
 
         XCTAssertEqual(-3, elevator.currentFloor)
     }
+
+    func testElevatorDeliversPassengersToRequestedFloor() {
+        let destination = 1
+
+        elevator.travel(to: destination)
+        elevator.tick()
+
+        XCTAssertEqual(destination, elevator.currentFloor)
+    }
+
+    func testElevatorStartsWithDoorsOpen() {
+        XCTAssert(elevator.areDoorsOpen)
+    }
+
+    func testElevatorClosesDoorsAfterCall() {
+        elevator.call(sourceFloor: 1)
+
+        XCTAssertFalse(elevator.areDoorsOpen)
+    }
+
+    func testElevatorClosesDoorsBeforeTravel() {
+        elevator.travel(to: 1)
+
+        XCTAssertFalse(elevator.areDoorsOpen)
+    }
+
+    func testOpenDoorsWhenReachingDestination() {
+        elevator.call(sourceFloor: 1)
+        elevator.tick()
+        
+        XCTAssert(elevator.areDoorsOpen)
+    }
 }
