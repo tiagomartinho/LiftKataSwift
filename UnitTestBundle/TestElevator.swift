@@ -16,9 +16,17 @@ class TestElevator: XCTestCase {
 
     func testElevatorTravelsOneFloorAtATime() {
         elevator.call(sourceFloor: 2)
-        
+
         elevator.tick()
 
         XCTAssertEqual(1, elevator.currentFloor)
+    }
+
+    func testElevatorStopTravelsAfterReachingDestination() {
+        elevator.call(sourceFloor: 2)
+
+        for _ in 1...100 { elevator.tick() }
+
+        XCTAssertEqual(2, elevator.currentFloor)
     }
 }
