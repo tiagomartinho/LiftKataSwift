@@ -1,23 +1,24 @@
 import XCTest
 
 class TestElevator: XCTestCase {
-    
+
+    let elevator = Elevator()
+
     func testNewElevatorStartsOnBaseFloor() {
-        let elevator = Elevator()
+        XCTAssertEqual(0, elevator.currentFloor)
+    }
+
+    func testTickWithoutDestinationDoesNothing() {
+        elevator.tick()
 
         XCTAssertEqual(0, elevator.currentFloor)
     }
 
-    func testUserCallsFromFirstFloor() {
-        let elevator = Elevator()
-
-        elevator.call(sourceFloor: 1, direction: .down)
+    func testElevatorTravelsOneFloorAtATime() {
+        elevator.call(sourceFloor: 2)
         
+        elevator.tick()
+
         XCTAssertEqual(1, elevator.currentFloor)
     }
 }
-
-// 1 - ^
-// 0 - E
-
-// RED -> GREEN -> REFACTOR

@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		24E3A7772180E1AB00B4C9B2 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3A7762180E1AB00B4C9B2 /* Elevator.swift */; };
-		24E3A7792180E36800B4C9B2 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3A7782180E36800B4C9B2 /* Direction.swift */; };
 		EAE613EB201C91E300D0C613 /* TestElevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE613EA201C91E300D0C613 /* TestElevator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24E3A7762180E1AB00B4C9B2 /* Elevator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
-		24E3A7782180E36800B4C9B2 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		EAE613E7201C91E300D0C613 /* UnitTestBundle.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestBundle.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE613EA201C91E300D0C613 /* TestElevator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestElevator.swift; sourceTree = "<group>"; };
 		EAE613EC201C91E300D0C613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				24E3A7762180E1AB00B4C9B2 /* Elevator.swift */,
-				24E3A7782180E36800B4C9B2 /* Direction.swift */,
 				EAE613EA201C91E300D0C613 /* TestElevator.swift */,
 				EAE613F0201C928C00D0C613 /* Supporting Files */,
 			);
@@ -136,7 +133,6 @@
 			files = (
 				EAE613EB201C91E300D0C613 /* TestElevator.swift in Sources */,
 				24E3A7772180E1AB00B4C9B2 /* Elevator.swift in Sources */,
-				24E3A7792180E36800B4C9B2 /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
